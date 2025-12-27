@@ -48,6 +48,7 @@ export default function ProjectDetails() {
           retries: 2,
         });
         const data: Project[] = await res.json();
+        console.log(data);
         const found = data.find((proj) => proj._id === id);
         setProject(found ?? null);
         if (!found) {
@@ -121,8 +122,9 @@ export default function ProjectDetails() {
 
   const handleMouseClick = () => {
     if (project?._id === "2") {
-      router.push(
-        "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application"
+      window.open(
+        "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application",
+        "_blank"
       );
       return;
     }
@@ -180,8 +182,12 @@ export default function ProjectDetails() {
                 className="object-contain"
               />
               <motion.a
-                href={project.website}
-                // target="_blank"
+                href={
+                  project._id === "2"
+                    ? "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application"
+                    : project.website
+                }
+                target={project._id === "2" ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 className="bg-[#1E1E1E] text-[#F3F3F3] text-lg font-semibold px-4 py-3 rounded-lg"
                 whileHover={{ scale: 1.05 }}

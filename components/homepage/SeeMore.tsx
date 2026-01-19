@@ -8,7 +8,7 @@ const seeAlsoItems = [
     category: "UI/UX • Fintech",
     year: "2024",
     title: "Doshup Savings and Investment Mobile Application Casestudy",
-    link: "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application",
+    link: "/projects/2",
   },
   {
     image:
@@ -16,7 +16,7 @@ const seeAlsoItems = [
     category: "UI/UX • Insurtech",
     year: "2024",
     title: "Insurance Committee Dashboard Casestudy",
-    link: "/projects/3/overview/three",
+    link: "/projects/3",
   },
 ];
 
@@ -35,7 +35,7 @@ const seeAlsoItemsTwo = [
     category: "UI/UX • Insurtech",
     year: "2024",
     title: "Insurance Committee Dashboard Casestudy",
-    link: "/projects/3/overview/three",
+    link: "/projects/3",
   },
 ];
 
@@ -54,7 +54,7 @@ const seeAlsoItemsThree = [
     category: "UI/UX • Fintech",
     year: "2024",
     title: "Doshup Savings and Investment Mobile Application Casestudy",
-    link: "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application",
+    link: "/projects/2",
   },
 ];
 

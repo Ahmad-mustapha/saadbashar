@@ -8,7 +8,7 @@ const seeAlsoItems = [
     category: "UI/UX • Fintech",
     year: "2024",
     title: "Doshup Savings and Investment Mobile Application Casestudy",
-    link: "/projects/2/overview/two",
+    link: "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application",
   },
   {
     image:
@@ -54,11 +54,9 @@ const seeAlsoItemsThree = [
     category: "UI/UX • Fintech",
     year: "2024",
     title: "Doshup Savings and Investment Mobile Application Casestudy",
-    link: "/projects/2/overview/two",
+    link: "https://www.behance.net/gallery/213097111/Student-Savings-Investment-Mobile-Application",
   },
 ];
-
-
 
 const SeeAlso = () => {
   return (
@@ -98,7 +96,6 @@ const SeeAlso = () => {
 
 export default SeeAlso;
 
-
 export const SeeAlsoTwo = () => {
   return (
     <div className="space-y-4 mx-6">
@@ -134,7 +131,6 @@ export const SeeAlsoTwo = () => {
     </div>
   );
 };
-
 
 export const SeeAlsoThree = () => {
   return (

@@ -15,9 +15,10 @@ import {
 // Import the actual PNG image files
 import BC from "@/public/images/brands/BC.png";
 import BS from "@/public/images/brands/BS.png";
+import CC from "@/public/images/brands/KF.png";
 import MM from "@/public/images/brands/MM.png";
 import S from "@/public/images/brands/S.png";
-import WT from "@/public/images/brands/WT.png";
+// import WT from "@/public/images/brands/WT.png";
 
 import StickyButton from "../HomeButton"; // Ensure path is correct
 
@@ -30,7 +31,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
   const [index, setIndex] = useState(0);
 
   // --- Image Logo Data Setup ---
-  const brandImages = [S, WT, BC, BS, MM];
+  const brandImages = [S, CC, BC, BS, MM];
   // *** Create a much longer array for robust marquee looping ***
   // Repeat the original set 6 times, similar to the Marquee component example
   const extendedBrandImages = Array(6).fill(brandImages).flat();
@@ -83,38 +84,38 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
     >
       {/* --- Top Section Structure (Unchanged) --- */}
       <div className="px-6 py-6">
-         {/* Intro Text (Unchanged) */}
-         <motion.div
+        {/* Intro Text (Unchanged) */}
+        <motion.div
           initial={{ x: -100, opacity: 0, rotate: -3 }}
           animate={{ x: 0, opacity: 1, rotate: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex items-start flex-row justify-between text-[#CDCDCD] text-[12px] md:text-[20px] lg:text-[28px] gap-2"
         >
-             <p className="w-[7rem] md:w-full text-left text-[14px] md:text-[25px]">
-                 Hi, I am{" "}
-                 <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.5 }} >
-                     Saad Bashar
-                 </motion.span>
-             </p>
-             <p className="flex items-center gap-2 justify-end w-full text-[14px] md:text-[25px]">
-                 <span className="text-[#34C759] animate-blink">•</span> I am
-                 available for new projects
-             </p>
-         </motion.div>
+          <p className="w-[7rem] md:w-full text-left text-[14px] md:text-[25px]">
+            Hi, I am{" "}
+            <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.5 }} >
+              Saad Bashar
+            </motion.span>
+          </p>
+          <p className="flex items-center gap-2 justify-end w-full text-[14px] md:text-[25px]">
+            <span className="text-[#34C759] animate-blink">•</span> I am
+            available for new projects
+          </p>
+        </motion.div>
 
-         {/* Animated Title & Description (Unchanged) */}
-         <motion.div
+        {/* Animated Title & Description (Unchanged) */}
+        <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           className="text-[#F3F3F3] mt-4 py-8 md:py-10"
         >
-            <h1 className="text-[36px] md:text-5xl lg:text-[58px] w-full leading-[44px] md:leading-[54px] md:w-[80%] font-semibold font-mori">
-                 I am a UI/UX and Product Designer, designing compelling{" "}
-                 <span className="sm:hidden inline-block"> landing pages, web apps, mobile apps, websites</span>
-                 <span className="relative hidden sm:inline-block align-bottom min-h-[1.2em] sm:min-h-[1.2em] md:min-h-[1em] lg:min-h-[.88em] min-w-[150px] md:min-w-[250px]">
-                     <AnimatePresence mode="wait">
-                         <motion.span
+          <h1 className="text-[36px] md:text-5xl lg:text-[58px] w-full leading-[44px] md:leading-[54px] md:w-[80%] font-semibold font-mori">
+            I am a UI/UX and Product Designer, designing compelling{" "}
+            <span className="sm:hidden inline-block"> landing pages, web apps, mobile apps, websites</span>
+            <span className="relative hidden sm:inline-block align-bottom min-h-[1.2em] sm:min-h-[1.2em] md:min-h-[1em] lg:min-h-[.88em] min-w-[150px] md:min-w-[250px]">
+              <AnimatePresence mode="wait">
+                <motion.span
                   key={words[index]}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -122,30 +123,30 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
                   transition={{ duration: .5, ease: "easeInOut" }}
                   className="absolute inset-0 whitespace-nowrap"
                 >
-                     {words[index]}
-                  </motion.span>
-                     </AnimatePresence>
-                 </span>
-             </h1>
+                  {words[index]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+          </h1>
 
-             <motion.p
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="text-base md:text-[20px] mt-10 w-full md:w-[90%]"
           >
-                 As a Designer with more than 3 years of dedicated experience, I
-                 create digital experiences that border on efficiency, aesthetics,
-                 and functionality—ones that users would want to revisit. My
-                 portfolio spans a variety of sectors, from fintech, insurtech, and
-                 edtech to SaaS.
-             </motion.p>
-         </motion.div>
+            As a Designer with more than 3 years of dedicated experience, I
+            create digital experiences that border on efficiency, aesthetics,
+            and functionality—ones that users would want to revisit. My
+            portfolio spans a variety of sectors, from fintech, insurtech, and
+            edtech to SaaS.
+          </motion.p>
+        </motion.div>
 
-         {/* Sticky Button Container (Unchanged) */}
-         <div className="mt-6 md:mt-0">
-             <StickyButton onClick={handleScrollToProjects} />
-         </div>
+        {/* Sticky Button Container (Unchanged) */}
+        <div className="mt-6 md:mt-0">
+          <StickyButton onClick={handleScrollToProjects} />
+        </div>
       </div>
 
       {/* ============================ */}
@@ -222,7 +223,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
                   height={80} // Consistent height for marquee images
                   width={0} // Auto width based on height
                   style={{ width: 'auto', height: '80px', objectFit: 'contain' }}
-                  // No loading="lazy" to prevent gaps
+                // No loading="lazy" to prevent gaps
                 />
               </div>
             ))}
